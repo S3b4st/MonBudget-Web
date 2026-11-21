@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>MonBudget</title>
+    <meta name="theme-color" content="#1765AD" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="MonBudget" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <base href="/MonBudget-Web/" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png" />
+    <link rel="stylesheet" href="_content/MonBudget.UI/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="_content/MonBudget.UI/app.css" />
+    <link rel="stylesheet" href="MonBudget.Web.styles.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png" />
+</head>
+
+<body>
+    <div id="app">Loading...</div>
+
+    <div id="blazor-error-ui" data-nosnippet>
+        An unhandled error has occurred.
+        <a href="." class="reload">Reload</a>
+        <span class="dismiss">🗙</span>
+    </div>
+
+    <script>
+        (() => {
+            const loopbackHosts = new Set(["localhost", "127.0.0.1", "::1", "[::1]"]);
+            const isLocalDevelopment = loopbackHosts.has(window.location.hostname);
+            const serviceWorkerUrl = new URL("service-worker.js", document.baseURI).href;
+
+            async function clearDevelopmentWorkerState() {
+                if (!("serviceWorker" in navigator)) {
+                    return;
+                }
+
+                try {
+                    const registrations = await navigator.serviceWorker.getRegistrations();
+                    await Promise.all(registrations
+                        .filter(registration => [registration.installing, registration.waiting, registration.active]
+                            .some(worker => worker?.scriptURL === serviceWorkerUrl))
+                        .map(registration => registration.unregister()));
+                } catch (error) {
+                    console.warn("MonBudget development service worker cleanup failed.", error);
+                }
+
+                if ("caches" in window) {
+                    try {
+                        const cacheNames = await caches.keys();
+                        await Promise.all(cacheNames
+                            .filter(name => name.startsWith("monbudget-offline-"))
+                            .map(name => caches.delete(name)));
+                    } catch (error) {
+                        console.warn("MonBudget development cache cleanup failed.", error);
+                    }
+                }
+            }
+
+            function loadClassicScript(source) {
+                return new Promise((resolve, reject) => {
+                    const script = document.createElement("script");
+                    script.src = new URL(source, document.baseURI).href;
+                    script.async = false;
+                    script.onload = resolve;
+                    script.onerror = () => reject(new Error(`Failed to load ${source}.`));
+                    document.body.appendChild(script);
+                });
+            }
+
+            async function startMonBudget() {
+                if (isLocalDevelopment) {
+                    await clearDevelopmentWorkerState();
+                }
+
+                await loadClassicScript("_content/MonBudget.UI/budgetJson.js");
+                await loadClassicScript("budgetStorage.js");
+                await loadClassicScript("googleDriveAuth.js");
+
+                const frameworkScript = document.createElement("script");
+                frameworkScript.src = new URL("_framework/blazor.webassembly.js", document.baseURI).href;
+                frameworkScript.setAttribute("autostart", "false");
+                await new Promise((resolve, reject) => {
+                    frameworkScript.onload = resolve;
+                    frameworkScript.onerror = () => reject(new Error("Failed to load the Blazor WebAssembly runtime."));
+                    document.body.appendChild(frameworkScript);
+                });
+
+                if (isLocalDevelopment) {
+                    const startOptions = {
+                        loadBootResource: (type, name, defaultUri, integrity) => {
+                            if (type === "dotnetjs") {
+                                return null;
+                            }
+
+                            return fetch(defaultUri, { cache: "no-store", integrity });
+                        }
+                    };
+                    await Blazor.start(startOptions);
+                    return;
+                }
+
+                await Blazor.start();
+                if ("serviceWorker" in navigator) {
+                    navigator.serviceWorker.register(serviceWorkerUrl, { updateViaCache: "none" })
+                        .catch(error => console.error("MonBudget service worker registration failed.", error));
+                }
+            }
+
+            startMonBudget().catch(error => {
+                console.error("MonBudget Web failed to start.", error);
+                const errorUi = document.querySelector("#blazor-error-ui");
+                if (errorUi) {
+                    errorUi.style.display = "block";
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
