@@ -1,5 +1,6 @@
 /* _content/MonBudget.UI/Components/DeleteConfirmation.razor.rz.scp.css */
 .delete-confirmation-backdrop[b-p2eayz0jy9]{position:fixed;inset:0;z-index:2000;display:grid;place-items:center;padding:1rem;background:rgb(15 23 42 / 55%)}.delete-confirmation-dialog[b-p2eayz0jy9]{width:min(100%,28rem);padding:1.25rem;border-radius:1rem;background:#fff;box-shadow:0 1.25rem 3rem rgb(0 0 0 / 25%)}.delete-confirmation-dialog h2[b-p2eayz0jy9]{margin:0 0 .65rem;color:#102b52;font-size:1.2rem}.delete-confirmation-dialog p[b-p2eayz0jy9]{margin:0;color:#52647a}.delete-confirmation-actions[b-p2eayz0jy9]{display:flex;justify-content:flex-end;gap:.6rem;margin-top:1.25rem}
+@media(max-width:600px){.delete-confirmation-backdrop[b-p2eayz0jy9]{align-items:end;padding:.75rem}.delete-confirmation-dialog[b-p2eayz0jy9]{padding:1.25rem 1rem calc(1rem + env(safe-area-inset-bottom));border-radius:1rem 1rem .65rem .65rem}.delete-confirmation-actions[b-p2eayz0jy9]{flex-direction:column-reverse;gap:.5rem}.delete-confirmation-actions .btn[b-p2eayz0jy9]{width:100%;min-height:2.75rem}}
 /* _content/MonBudget.UI/Components/FirstRunTutorial.razor.rz.scp.css */
 .tutorial-backdrop[b-xrlbtaz7kd] {
     position: fixed;
@@ -3505,6 +3506,7 @@ main[b-ap79ptrj4e] {
 .provision-history-details[b-0yqpdaarho] { display:grid; min-width:0; gap:.15rem; }
 .provision-history-details strong[b-0yqpdaarho] { color:#334155; }
 .provision-history-details small[b-0yqpdaarho] { overflow-wrap:anywhere; line-height:1.35; }
+.provision-archived-label[b-0yqpdaarho] { color:#8a5a00; font-weight:650; }
 .provision-history-type[b-0yqpdaarho] { align-self:center; padding:.25rem .55rem; border-radius:999px; font-size:.75rem; font-weight:700; white-space:nowrap; }
 .contribution-type[b-0yqpdaarho] { background:#e9f7ef; color:#18794e; }
 .payment-type[b-0yqpdaarho] { background:#fff0ee; color:#a52a20; }

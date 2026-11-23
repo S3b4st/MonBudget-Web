@@ -1,8 +1,8 @@
 self.assetsManifest = {
-  "version": "FmaFe+0u",
+  "version": "Xqn6cWtD",
   "assets": [
     {
-      "hash": "sha256-R4PYwM4yj1uAsHyJENYlKgPDgjixKD621p0n8uTxUww=",
+      "hash": "sha256-+wShb4D2H523RwUaLED+FRF3sAjEK4J9dLOYr5Ocoag=",
       "url": "MonBudget.Web.styles.css"
     },
     {
@@ -206,8 +206,8 @@ self.assetsManifest = {
       "url": "_content/Blazor-ApexCharts/locales/zh-tw.json"
     },
     {
-      "hash": "sha256-u+7NZAkDnYese7+5sPkplR5Mpuy8Mw5Ofwatyw1xtfA=",
-      "url": "_content/MonBudget.UI/MonBudget.UI.d6ajrr96oz.bundle.scp.css"
+      "hash": "sha256-FpkjNlSkzw+GZRa4xECsyziqWF70gq0UV9aacijuaLk=",
+      "url": "_content/MonBudget.UI/MonBudget.UI.6tt47koxdx.bundle.scp.css"
     },
     {
       "hash": "sha256-tH3Yucrt1PAZKb6OzQNxe4uYwnh5UXcU41kHO5bKQko=",
@@ -310,16 +310,16 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.JSInterop.WebAssembly.5ql0ra5mpq.wasm"
     },
     {
-      "hash": "sha256-mNpXKgOxsryLEnLorLGtK6xhk1SJZU2LWUmYQpC4IiE=",
-      "url": "_framework/MonBudget.Core.wudhtudylm.wasm"
+      "hash": "sha256-aDB+qyYS9wEupEwMaxpNjuAJvumZ3pgOQ3RZ0gaf7mA=",
+      "url": "_framework/MonBudget.Core.49u54511ln.wasm"
     },
     {
-      "hash": "sha256-A+smaLc7kHX5rTQ+Q5sc1O59nldr0eYUlANzc/Jp2bk=",
-      "url": "_framework/MonBudget.UI.lyismop01q.wasm"
+      "hash": "sha256-TgovSl28Ux5Jo8jYw3vj2vlBAFM27whn0S856wH+GR4=",
+      "url": "_framework/MonBudget.UI.ybefw9ree5.wasm"
     },
     {
-      "hash": "sha256-isHaFBN+tzvTYI/EIATcMgDMfZM9H2Aoxrnq8Xl+od4=",
-      "url": "_framework/MonBudget.Web.azk9gf4mrl.wasm"
+      "hash": "sha256-Gm1FjQeTN9R3Qf/zkjzr91ERcTpe/9UQdtAsXw7TG20=",
+      "url": "_framework/MonBudget.Web.ii0m92xv3v.wasm"
     },
     {
       "hash": "sha256-ChSvbFTNSbrMEQ4iipc8UIJl08SAB0+iz1FIKPgE5XU=",
@@ -450,7 +450,7 @@ self.assetsManifest = {
       "url": "_framework/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-DEwe6n3XnWLQDYh2EbKxc39efHPwcnASlCPLsyJObdI=",
+      "hash": "sha256-vg4TRNZ/u7cmDl1/QaGbopG3AQMtzP9mTe5zgEO5Uq4=",
       "url": "_framework/dotnet.js"
     },
     {
