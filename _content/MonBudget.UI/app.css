@@ -41,7 +41,6 @@
     --mb-info-border: #d9e8f7;
     --mb-overlay: rgb(15 23 42 / 55%);
     --mb-chart-grid: #e2e8f0;
-    --maui-status-bar-safe-area-background: #fff;
     color-scheme: light;
 }
 
@@ -84,7 +83,6 @@ html, body {
     --mb-info-border: #3B5B84;
     --mb-overlay: rgb(3 9 20 / 76%);
     --mb-chart-grid: #354A67;
-    --maui-status-bar-safe-area-background: #101B30;
     --bs-body-color: var(--mb-text);
     --bs-body-bg: var(--mb-surface-muted);
     --bs-border-color: var(--mb-border);
@@ -199,16 +197,6 @@ h1:focus {
     text-align: start;
 }
 
-.status-bar-safe-area {
-    display: flex;
-    position: sticky;
-    top: 0;
-    height: env(safe-area-inset-top, 0px);
-    background-color: var(--maui-status-bar-safe-area-background, transparent);
-    width: 100%;
-    z-index: 1;
-}
-
 .flex-column, .navbar-brand {
     padding-left: env(safe-area-inset-left, 0px);
 }
@@ -217,9 +205,7 @@ h1:focus {
 :root[data-theme="dark"] body,
 :root[data-theme="dark"] .page,
 :root[data-theme="dark"] .page main,
-:root[data-theme="dark"] .content,
-:root[data-theme="dark"] .mobile-shell,
-:root[data-theme="dark"] .mobile-content {
+:root[data-theme="dark"] .content {
     color: var(--mb-text);
     background-color: var(--mb-surface-muted);
 }
@@ -243,15 +229,15 @@ h1:focus {
     color: var(--mb-link);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(h1, h2, h3, h4, h5, h6, p, label, dt, dd, strong, small, li, span, th, td, legend, summary) {
+:root[data-theme="dark"] .page :is(h1, h2, h3, h4, h5, h6, p, label, dt, dd, strong, small, li, span, th, td, legend, summary) {
     color: var(--mb-text);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(small, dt, .text-muted, .section-kicker, .home-eyebrow, .metric-label, .dashboard-empty-chart, .chart-caption, .progress-foot, .recent-description small, .provision-frequency, .settings-heading > span) {
+:root[data-theme="dark"] .page :is(small, dt, .text-muted, .section-kicker, .home-eyebrow, .metric-label, .dashboard-empty-chart, .chart-caption, .progress-foot, .recent-description small, .provision-frequency, .settings-heading > span) {
     color: var(--mb-text-muted) !important;
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(section, article, .card, [class$="-card"], [class$="-panel"], details, .home-tile, .transaction-period, .transaction-form, .pay-settings, .pay-history, .income-form, .income-list, .account-menu-panel, .tutorial-dialog, .delete-confirmation-dialog) {
+:root[data-theme="dark"] .page :is(section, article, .card, [class$="-card"], [class$="-panel"], details, .home-tile, .transaction-period, .transaction-form, .pay-settings, .pay-history, .income-form, .income-list, .account-menu-panel, .tutorial-dialog, .delete-confirmation-dialog) {
     border-color: var(--mb-border);
     background-color: var(--mb-surface);
     box-shadow: var(--mb-shadow-card);
@@ -264,81 +250,81 @@ h1:focus {
     color: var(--mb-text);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) .dashboard-hero {
+:root[data-theme="dark"] .page .dashboard-hero {
     border-color: var(--mb-border);
     background: linear-gradient(135deg, var(--mb-surface), var(--mb-hero-end));
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) a,
-:root[data-theme="dark"] :is(.page, .mobile-shell) a span,
-:root[data-theme="dark"] :is(.page, .mobile-shell) .btn-link {
+:root[data-theme="dark"] .page a,
+:root[data-theme="dark"] .page a span,
+:root[data-theme="dark"] .page .btn-link {
     color: var(--mb-link);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.form-control, .form-select, input:not([type="checkbox"]):not([type="radio"]), select, textarea) {
+:root[data-theme="dark"] .page :is(.form-control, .form-select, input:not([type="checkbox"]):not([type="radio"]), select, textarea) {
     border-color: var(--mb-border);
     background-color: var(--mb-surface-inset);
     color: var(--mb-text);
     color-scheme: dark;
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(input, textarea)::placeholder {
+:root[data-theme="dark"] .page :is(input, textarea)::placeholder {
     color: var(--mb-text-muted);
     opacity: 1;
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(input[type="checkbox"], input[type="radio"], .form-check-input) {
+:root[data-theme="dark"] .page :is(input[type="checkbox"], input[type="radio"], .form-check-input) {
     accent-color: var(--mb-accent);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) button:not(.btn-primary):not(.btn-danger):not(.btn-success):not(.btn-warning):not(.quick-add):not(.account-menu-trigger):not(.mobile-back):not(.provision-tab) {
+:root[data-theme="dark"] .page button:not(.btn-primary):not(.btn-danger):not(.btn-success):not(.btn-warning):not(.quick-add):not(.account-menu-trigger):not(.provision-tab) {
     border-color: var(--mb-border);
     background-color: var(--mb-surface-raised);
     color: var(--mb-text);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) .btn-primary,
-:root[data-theme="dark"] :is(.page, .mobile-shell) .quick-add .add-symbol {
+:root[data-theme="dark"] .page .btn-primary,
+:root[data-theme="dark"] .page .quick-add .add-symbol {
     border-color: var(--mb-accent);
     background-color: var(--mb-accent);
     color: var(--mb-text-on-accent);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) .btn-outline-primary {
+:root[data-theme="dark"] .page .btn-outline-primary {
     border-color: var(--mb-link);
     background-color: transparent;
     color: var(--mb-link);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.btn-outline-secondary, .btn-secondary) {
+:root[data-theme="dark"] .page :is(.btn-outline-secondary, .btn-secondary) {
     border-color: var(--mb-border);
     background-color: var(--mb-surface-raised);
     color: var(--mb-text);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.btn-outline-danger, .btn-danger) {
+:root[data-theme="dark"] .page :is(.btn-outline-danger, .btn-danger) {
     border-color: var(--mb-danger);
     color: var(--mb-danger);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) .btn-danger {
+:root[data-theme="dark"] .page .btn-danger {
     background-color: var(--mb-danger-surface);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.btn-outline-success, .btn-success) {
+:root[data-theme="dark"] .page :is(.btn-outline-success, .btn-success) {
     border-color: var(--mb-success);
     color: var(--mb-success);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) .btn-success {
+:root[data-theme="dark"] .page .btn-success {
     background-color: var(--mb-success-surface);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) .nav-link {
+:root[data-theme="dark"] .page .nav-link {
     color: var(--mb-text-muted);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.nav-link:hover, .nav-link.active) {
+:root[data-theme="dark"] .page :is(.nav-link:hover, .nav-link.active) {
     background-color: var(--mb-accent-soft);
     color: var(--mb-link);
 }
@@ -361,19 +347,19 @@ h1:focus {
     border-color: var(--mb-surface);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.provision-tab, .tab-button, [role="tab"]) {
+:root[data-theme="dark"] .page :is(.provision-tab, .tab-button, [role="tab"]) {
     border-color: var(--mb-border);
     background-color: transparent;
     color: var(--mb-text-muted);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.provision-tab.active, .tab-button.active, [role="tab"][aria-selected="true"]) {
+:root[data-theme="dark"] .page :is(.provision-tab.active, .tab-button.active, [role="tab"][aria-selected="true"]) {
     border-color: var(--mb-accent);
     background-color: var(--mb-accent-soft);
     color: var(--mb-link);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(table, .table) {
+:root[data-theme="dark"] .page :is(table, .table) {
     --bs-table-color: var(--mb-text);
     --bs-table-bg: transparent;
     --bs-table-border-color: var(--mb-border);
@@ -381,224 +367,224 @@ h1:focus {
     color: var(--mb-text);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(th, td, .table > :not(caption) > * > *) {
+:root[data-theme="dark"] .page :is(th, td, .table > :not(caption) > * > *) {
     border-color: var(--mb-border);
     color: var(--mb-text);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.table-striped > tbody > tr:nth-of-type(odd) > *, .table-hover > tbody > tr:hover > *) {
+:root[data-theme="dark"] .page :is(.table-striped > tbody > tr:nth-of-type(odd) > *, .table-hover > tbody > tr:hover > *) {
     --bs-table-bg-type: var(--mb-surface-inset);
     --bs-table-color-type: var(--mb-text);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.text-danger, .is-negative, .is-over-budget, .overrun-message, .provision-negative, .negative-amount, .negative-balance, .invalid, .validation-message, .over-budget) {
+:root[data-theme="dark"] .page :is(.text-danger, .is-negative, .is-over-budget, .overrun-message, .provision-negative, .negative-amount, .negative-balance, .invalid, .validation-message, .over-budget) {
     color: var(--mb-danger) !important;
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) .budget-progress-fill.over-budget {
+:root[data-theme="dark"] .page .budget-progress-fill.over-budget {
     background: var(--mb-danger);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.text-success, .is-positive, .balance-positive, .provision-positive, .contribution-type) {
+:root[data-theme="dark"] .page :is(.text-success, .is-positive, .balance-positive, .provision-positive, .contribution-type) {
     color: var(--mb-success) !important;
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.text-warning, .payment-type, .warning-text) {
+:root[data-theme="dark"] .page :is(.text-warning, .payment-type, .warning-text) {
     color: var(--mb-warning) !important;
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.alert, .global-budget-warning, .restore-warning, .provision-guidance, .drive-feedback, .feedback-success, .feedback-error) {
+:root[data-theme="dark"] .page :is(.alert, .global-budget-warning, .restore-warning, .provision-guidance, .drive-feedback, .feedback-success, .feedback-error) {
     border-color: var(--mb-border);
     background-color: var(--mb-surface-raised);
     color: var(--mb-text);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.alert-danger, .feedback-error, .global-budget-warning, .restore-warning) {
+:root[data-theme="dark"] .page :is(.alert-danger, .feedback-error, .global-budget-warning, .restore-warning) {
     border-color: var(--mb-danger-border);
     background-color: var(--mb-danger-surface);
     color: var(--mb-danger);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.alert-success, .feedback-success, .provision-guidance, .contribution-type) {
+:root[data-theme="dark"] .page :is(.alert-success, .feedback-success, .provision-guidance, .contribution-type) {
     border-color: var(--mb-success-border);
     background-color: var(--mb-success-surface);
     color: var(--mb-success);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.alert-warning, .payment-type) {
+:root[data-theme="dark"] .page :is(.alert-warning, .payment-type) {
     border-color: var(--mb-warning-border);
     background-color: var(--mb-warning-surface);
     color: var(--mb-warning);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.alert-info, .sync-pill, .drive-status-icon, .metric-icon, .tile-icon, .provision-icon, .savings-symbol, .settings-card-icon, .empty-icon, .expense-icon) {
+:root[data-theme="dark"] .page :is(.alert-info, .sync-pill, .drive-status-icon, .metric-icon, .tile-icon, .provision-icon, .savings-symbol, .settings-card-icon, .empty-icon, .expense-icon) {
     border-color: var(--mb-info-border);
     background-color: var(--mb-info-surface);
     color: var(--mb-info);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.metric-income .metric-icon, .metric-remaining .metric-icon, .savings-symbol, .tile-provisions .tile-icon, .tile-savings .tile-icon) {
+:root[data-theme="dark"] .page :is(.metric-income .metric-icon, .metric-remaining .metric-icon, .savings-symbol, .tile-provisions .tile-icon, .tile-savings .tile-icon) {
     border-color: var(--mb-success-border);
     background-color: var(--mb-success-surface);
     color: var(--mb-success);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) .metric-spent .metric-icon {
+:root[data-theme="dark"] .page .metric-spent .metric-icon {
     border-color: var(--mb-warning-border);
     background-color: var(--mb-warning-surface);
     color: var(--mb-warning);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.category-budget, .provision-metrics > div, .variable-expenses-totals > div, .provision-form-section, .past-pay-history, .pay-period-dates, .pay-field, .history-tab, .account-menu-status, .account-budget-form) {
+:root[data-theme="dark"] .page :is(.category-budget, .provision-metrics > div, .variable-expenses-totals > div, .provision-form-section, .past-pay-history, .pay-period-dates, .pay-field, .history-tab, .account-menu-status, .account-budget-form) {
     border-color: var(--mb-border);
     background-color: var(--mb-surface-inset);
     color: var(--mb-text);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.savings-form-section, .movement-form-section, .expense-form-section, .expense-active-field, .goal-metrics > div) {
+:root[data-theme="dark"] .page :is(.savings-form-section, .movement-form-section, .expense-form-section, .expense-active-field, .goal-metrics > div) {
     border-color: var(--mb-border);
     background-color: var(--mb-surface-inset);
     color: var(--mb-text);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.current-period-badge, .kind-income) {
+:root[data-theme="dark"] .page :is(.current-period-badge, .kind-income) {
     border-color: var(--mb-success-border);
     background-color: var(--mb-success-surface);
     color: var(--mb-success);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.income-total strong, .remaining-total strong) {
+:root[data-theme="dark"] .page :is(.income-total strong, .remaining-total strong) {
     color: var(--mb-success) !important;
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.kind-expense, .kind-planned, .activity-date-icon, .activity-empty-icon, .activity-planned-badge) {
+:root[data-theme="dark"] .page :is(.kind-expense, .kind-planned, .activity-date-icon, .activity-empty-icon, .activity-planned-badge) {
     border-color: var(--mb-info-border);
     background-color: var(--mb-info-surface);
     color: var(--mb-info);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.activity-search, .activity-type-filters label) {
+:root[data-theme="dark"] .page :is(.activity-search, .activity-type-filters label) {
     border-color: var(--mb-border);
     background-color: var(--mb-surface-inset);
     color: var(--mb-text-muted);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) .activity-period-banner {
+:root[data-theme="dark"] .page .activity-period-banner {
     background: linear-gradient(120deg, var(--mb-surface), var(--mb-hero-end));
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.activity-day-heading, .activity-list > li, .period-summary, .period-summary .remaining, .transaction-list li, .movement-history li) {
+:root[data-theme="dark"] .page :is(.activity-day-heading, .activity-list > li, .period-summary, .period-summary .remaining, .transaction-list li, .movement-history li) {
     border-color: var(--mb-border);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) .planned-activity-row {
+:root[data-theme="dark"] .page .planned-activity-row {
     background: linear-gradient(90deg, var(--mb-accent-soft), transparent 70%);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.planned-total strong, .planned-amount) {
+:root[data-theme="dark"] .page :is(.planned-total strong, .planned-amount) {
     color: var(--mb-info) !important;
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.expense-total strong, .expense-amount, .activity-description strong, .activity-day-heading h2, .period-summary .actual-bank-balance, .period-summary .estimated-bank-balance) {
+:root[data-theme="dark"] .page :is(.expense-total strong, .expense-amount, .activity-description strong, .activity-day-heading h2, .period-summary .actual-bank-balance, .period-summary .estimated-bank-balance) {
     color: var(--mb-text) !important;
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.activity-total-card span, .activity-total-card small, .activity-header p, .activity-day-heading > span, .activity-description small, .activity-confirm-dialog p, .movement-description span, .goal-balance span, .goal-progress > div span, .goal-metrics dt) {
+:root[data-theme="dark"] .page :is(.activity-total-card span, .activity-total-card small, .activity-header p, .activity-day-heading > span, .activity-description small, .activity-confirm-dialog p, .movement-description span, .goal-balance span, .goal-progress > div span, .goal-metrics dt) {
     color: var(--mb-text-muted) !important;
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.activity-error, .activity-total-card strong.is-negative, .activity-icon-button.delete-action:hover, .activity-icon-button.delete-action:focus-visible) {
+:root[data-theme="dark"] .page :is(.activity-error, .activity-total-card strong.is-negative, .activity-icon-button.delete-action:hover, .activity-icon-button.delete-action:focus-visible) {
     color: var(--mb-danger) !important;
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) .activity-search:focus-within {
+:root[data-theme="dark"] .page .activity-search:focus-within {
     border-color: var(--mb-focus-ring);
     box-shadow: 0 0 0 .18rem color-mix(in srgb, var(--mb-focus-ring) 20%, transparent);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.activity-icon-button:hover, .activity-icon-button:focus-visible) {
+:root[data-theme="dark"] .page :is(.activity-icon-button:hover, .activity-icon-button:focus-visible) {
     background-color: var(--mb-surface-hover);
     color: var(--mb-link);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) .activity-icon-button.delete-action:is(:hover, :focus-visible) {
+:root[data-theme="dark"] .page .activity-icon-button.delete-action:is(:hover, :focus-visible) {
     background-color: var(--mb-danger-surface);
     color: var(--mb-danger);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) .activity-dialog-backdrop {
+:root[data-theme="dark"] .page .activity-dialog-backdrop {
     background: var(--mb-overlay);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) .activity-confirm-dialog {
+:root[data-theme="dark"] .page .activity-confirm-dialog {
     border-color: var(--mb-border);
     background-color: var(--mb-surface);
     box-shadow: var(--mb-shadow-card);
     color: var(--mb-text);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) .confirm-icon {
+:root[data-theme="dark"] .page .confirm-icon {
     background-color: var(--mb-danger-surface);
     color: var(--mb-danger);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.delete-confirmation-backdrop, .tutorial-backdrop) {
+:root[data-theme="dark"] .page :is(.delete-confirmation-backdrop, .tutorial-backdrop) {
     background: var(--mb-overlay);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.account-menu-panel, .delete-confirmation-dialog, .tutorial-dialog, .modal-content, [role="dialog"]) {
+:root[data-theme="dark"] .page :is(.account-menu-panel, .delete-confirmation-dialog, .tutorial-dialog, .modal-content, [role="dialog"]) {
     border-color: var(--mb-border);
     background-color: var(--mb-surface);
     color: var(--mb-text);
     box-shadow: var(--mb-shadow-card);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.account-menu-trigger, .tutorial-close, .mobile-back) {
+:root[data-theme="dark"] .page :is(.account-menu-trigger, .tutorial-close) {
     border-color: var(--mb-border);
     background-color: transparent;
     color: var(--mb-text);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.account-menu-backdrop, .modal-backdrop) {
+:root[data-theme="dark"] .page :is(.account-menu-backdrop, .modal-backdrop) {
     background-color: var(--mb-overlay);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.budget-progress-track, .provision-progress-track, .tutorial-progress, progress) {
+:root[data-theme="dark"] .page :is(.budget-progress-track, .provision-progress-track, .tutorial-progress, progress) {
     border-color: var(--mb-border);
     background-color: var(--mb-surface-inset);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.budget-progress-fill, .provision-progress-track span) {
+:root[data-theme="dark"] .page :is(.budget-progress-fill, .provision-progress-track span) {
     background-color: var(--mb-accent);
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.apexcharts-canvas, .apexcharts-svg) {
+:root[data-theme="dark"] .page :is(.apexcharts-canvas, .apexcharts-svg) {
     background: transparent !important;
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.apexcharts-text, .apexcharts-legend-text, .apexcharts-xaxis-title, .apexcharts-yaxis-title) {
+:root[data-theme="dark"] .page :is(.apexcharts-text, .apexcharts-legend-text, .apexcharts-xaxis-title, .apexcharts-yaxis-title) {
     fill: var(--mb-text-muted) !important;
     color: var(--mb-text-muted) !important;
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.apexcharts-gridline, .apexcharts-xaxis line, .apexcharts-yaxis line) {
+:root[data-theme="dark"] .page :is(.apexcharts-gridline, .apexcharts-xaxis line, .apexcharts-yaxis line) {
     stroke: var(--mb-chart-grid) !important;
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.apexcharts-tooltip, .apexcharts-xaxistooltip, .apexcharts-yaxistooltip) {
+:root[data-theme="dark"] .page :is(.apexcharts-tooltip, .apexcharts-xaxistooltip, .apexcharts-yaxistooltip) {
     border-color: var(--mb-border) !important;
     background: var(--mb-surface-raised) !important;
     color: var(--mb-text) !important;
     box-shadow: var(--mb-shadow-card) !important;
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.apexcharts-tooltip-title, .apexcharts-xaxistooltip-bottom, .apexcharts-yaxistooltip-left) {
+:root[data-theme="dark"] .page :is(.apexcharts-tooltip-title, .apexcharts-xaxistooltip-bottom, .apexcharts-yaxistooltip-left) {
     border-color: var(--mb-border) !important;
     background: var(--mb-surface-inset) !important;
     color: var(--mb-text) !important;
 }
 
-:root[data-theme="dark"] :is(.page, .mobile-shell) :is(.btn:focus-visible, button:focus-visible, .form-control:focus, .form-select:focus, .form-check-input:focus) {
+:root[data-theme="dark"] .page :is(.btn:focus-visible, button:focus-visible, .form-control:focus, .form-select:focus, .form-check-input:focus) {
     box-shadow: 0 0 0 .2rem color-mix(in srgb, var(--mb-focus-ring) 36%, transparent);
 }
 

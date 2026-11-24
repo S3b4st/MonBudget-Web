@@ -1,8 +1,8 @@
 self.assetsManifest = {
-  "version": "z7qzbHts",
+  "version": "Pc6/187q",
   "assets": [
     {
-      "hash": "sha256-+wShb4D2H523RwUaLED+FRF3sAjEK4J9dLOYr5Ocoag=",
+      "hash": "sha256-P0WZmFjsDjT4QEimul2GonaGoYyJCXIGPRR7fFa++bg=",
       "url": "MonBudget.Web.styles.css"
     },
     {
@@ -206,11 +206,11 @@ self.assetsManifest = {
       "url": "_content/Blazor-ApexCharts/locales/zh-tw.json"
     },
     {
-      "hash": "sha256-FpkjNlSkzw+GZRa4xECsyziqWF70gq0UV9aacijuaLk=",
-      "url": "_content/MonBudget.UI/MonBudget.UI.6tt47koxdx.bundle.scp.css"
+      "hash": "sha256-rl7LrD6vKAh7a5rDE0qtMYgg++FLdowODZSwerTPYJQ=",
+      "url": "_content/MonBudget.UI/MonBudget.UI.meqse3r6cq.bundle.scp.css"
     },
     {
-      "hash": "sha256-tH3Yucrt1PAZKb6OzQNxe4uYwnh5UXcU41kHO5bKQko=",
+      "hash": "sha256-TT+Z6L+NCXPe8eM8X3SeFA53DNtY9DxRXYeOS6sk2q4=",
       "url": "_content/MonBudget.UI/app.css"
     },
     {
@@ -218,7 +218,7 @@ self.assetsManifest = {
       "url": "_content/MonBudget.UI/budgetJson.js"
     },
     {
-      "hash": "sha256-pxHBLn00uVnEpiz22XLku5T3isEHsFvWQBraoHttYqo=",
+      "hash": "sha256-lH2BgvidL33Q8hiu2ab6kg//I+6mAhmrXO6xCinGWJg=",
       "url": "_content/MonBudget.UI/docs/google-drive-setup.md"
     },
     {
@@ -310,16 +310,16 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.JSInterop.WebAssembly.5ql0ra5mpq.wasm"
     },
     {
-      "hash": "sha256-ol68m9j0CXSQfozEHSO6bJK7Rmp1QqJX1THFnRW5GUA=",
-      "url": "_framework/MonBudget.Core.ek8ge94too.wasm"
+      "hash": "sha256-t+voRSfI5hAHerkjJAGJAl1a6MYpFstpuI1sqzVZgGE=",
+      "url": "_framework/MonBudget.Core.zdswo7cxxt.wasm"
     },
     {
-      "hash": "sha256-4OWUiIJ5DRAz7KVqdII/YFSKBKFtyDhotxRrorUwQVc=",
-      "url": "_framework/MonBudget.UI.0khobfrhx8.wasm"
+      "hash": "sha256-P1WHp0CF5vixHytCTzcG35T+DMmoUg6WZhtEEEQnzlE=",
+      "url": "_framework/MonBudget.UI.d9n0pjxheb.wasm"
     },
     {
-      "hash": "sha256-SkPk3jc4LXn0bsj+aiyEFzcDV3CFfS+yvXzUD+z97y4=",
-      "url": "_framework/MonBudget.Web.eqsh5ri2kg.wasm"
+      "hash": "sha256-9wA4alDNcSyIUb02SZHDq2ltzmW9mypJxPM6S2jvuH8=",
+      "url": "_framework/MonBudget.Web.df27fmrfot.wasm"
     },
     {
       "hash": "sha256-ChSvbFTNSbrMEQ4iipc8UIJl08SAB0+iz1FIKPgE5XU=",
@@ -402,8 +402,8 @@ self.assetsManifest = {
       "url": "_framework/System.Private.CoreLib.erqdqnkoha.wasm"
     },
     {
-      "hash": "sha256-QrcRBehLGO3bJYZ5OwIR9QiT027N4H7uxNzGxTSSzoo=",
-      "url": "_framework/System.Private.Uri.qxknr12bcm.wasm"
+      "hash": "sha256-+jJvgd6c4j4gbxOWhnACPCwgyDDQkel5Ud9MJvpURlQ=",
+      "url": "_framework/System.Private.Uri.2ukeioetgu.wasm"
     },
     {
       "hash": "sha256-EVAzmBkyp5RijJAzzJUC6KSQaFIVFbiB6n9FmrLQLZ0=",
@@ -450,7 +450,7 @@ self.assetsManifest = {
       "url": "_framework/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-KDYOl/9of9VEGT3irKpBzFzwy7r3yD1iYicdSN3uZ20=",
+      "hash": "sha256-A2anZV8+gaMAKWg1Dj7NkjsVTTYhlKmzEKa8fI0EsYc=",
       "url": "_framework/dotnet.js"
     },
     {
@@ -490,7 +490,7 @@ self.assetsManifest = {
       "url": "budgetStorage.js"
     },
     {
-      "hash": "sha256-NYPDIaWvHz5tclxxYegNB7cSgdEIXNVvpO96k4uJv0E=",
+      "hash": "sha256-5guZOLjRkskXCJgc2Ov+bFIgjcjn7m/lw+1TDtO45lM=",
       "url": "docs/google-drive-setup.md"
     },
     {
