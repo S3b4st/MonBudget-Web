@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "V0qu8ym6",
+  "version": "2LWMOMeT",
   "assets": [
     {
       "hash": "sha256-jOaOb/DqcUf8PoM1273QpRpcKrGjD5E/hHKoTlr/E2E=",
@@ -310,16 +310,16 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.JSInterop.WebAssembly.5ql0ra5mpq.wasm"
     },
     {
-      "hash": "sha256-CkzzvAao5YbgphmwPdDmPO+/oRLA9QEClZQlZU3bEfo=",
-      "url": "_framework/MonBudget.Core.y1nx9ytucu.wasm"
+      "hash": "sha256-tyr7DDHNFfyrhoZq4KSefb+xcnvEMSNCtmxZBwuCN7s=",
+      "url": "_framework/MonBudget.Core.9gg49wkd0w.wasm"
     },
     {
-      "hash": "sha256-KhVKt5WPLy1wuEu7OOVTDZhRVeXjqN15AnOvLbiIoHs=",
-      "url": "_framework/MonBudget.UI.6xognj1iv6.wasm"
+      "hash": "sha256-R9Z7wFOTvORuQ6bdZDcuLPoCuFg2dCA1SEjGFa2kkmA=",
+      "url": "_framework/MonBudget.UI.rjgur7fblx.wasm"
     },
     {
-      "hash": "sha256-mkCiuyT4vP5ArRsmqOZNDD7IXRs03Ldzv3sXi5R3dXE=",
-      "url": "_framework/MonBudget.Web.y6e7137okg.wasm"
+      "hash": "sha256-lD/1zQTq84ao42EomkX8y+SUw6/BG36GXcr8VYYduWo=",
+      "url": "_framework/MonBudget.Web.cos50owxfk.wasm"
     },
     {
       "hash": "sha256-ChSvbFTNSbrMEQ4iipc8UIJl08SAB0+iz1FIKPgE5XU=",
@@ -450,7 +450,7 @@ self.assetsManifest = {
       "url": "_framework/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-3Svyw3frzKbWEcy15My5bYuytX4Wy+2HrcC2q7CL0Kc=",
+      "hash": "sha256-B7b4qLjw1ghAW8Na3AEVeVJe2/jLAsPSFsDnJGejD2A=",
       "url": "_framework/dotnet.js"
     },
     {
