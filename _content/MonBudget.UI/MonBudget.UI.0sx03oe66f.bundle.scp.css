@@ -748,6 +748,40 @@ main[b-ap79ptrj4e] {
     color: var(--mb-text, #243247);
 }
 
+.expense-shortcut-options[b-2c11q73xxc] {
+    display: grid;
+    gap: 0.65rem;
+}
+
+.expense-shortcut-option[b-2c11q73xxc] {
+    display: grid;
+    width: 100%;
+    gap: 0.3rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--mb-border, #e5ebf2);
+    border-radius: 0.8rem;
+    background: var(--mb-surface, #fff);
+    color: var(--mb-text, #243247);
+    text-align: left;
+}
+
+.expense-shortcut-option strong[b-2c11q73xxc] {
+    font-size: 1rem;
+}
+
+.expense-shortcut-option span[b-2c11q73xxc] {
+    color: var(--mb-text-muted, #52647a);
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.expense-shortcut-option:hover[b-2c11q73xxc],
+.expense-shortcut-option:focus-visible[b-2c11q73xxc] {
+    border-color: var(--monbudget-primary, #503c73);
+    outline: 2px solid color-mix(in srgb, var(--monbudget-primary, #503c73) 20%, transparent);
+    outline-offset: 1px;
+}
+
 @media (max-width: 600px) {
     .transaction-entry-backdrop[b-2c11q73xxc] {
         align-items: end;
@@ -3363,6 +3397,11 @@ main[b-ap79ptrj4e] {
 
 .provision-negative[b-0yqpdaarho] {
     color: var(--danger, #b42318);
+}
+
+.provision-result-preview[b-0yqpdaarho] {
+    margin: 1rem 0 0;
+    color: var(--mb-text-muted, #52647a);
 }
 
 .provision-balance-value.negative[b-0yqpdaarho] {

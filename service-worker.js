@@ -1,4 +1,4 @@
-/* Manifest version: +nwbJKx/ */
+/* Manifest version: l6BB1BkN */
 // Offline shell for the published Blazor WebAssembly PWA.
 self.importScripts('./service-worker-assets.js');
 
