@@ -3365,6 +3365,10 @@ main[b-ap79ptrj4e] {
     color: var(--danger, #b42318);
 }
 
+.provision-balance-value.negative[b-0yqpdaarho] {
+    color: var(--danger, #b42318);
+}
+
 .provision-page[b-0yqpdaarho] { display:grid; gap:1.25rem; }
 .provision-page-heading[b-0yqpdaarho] { max-width:64rem; }
 .provision-page-heading .section-kicker[b-0yqpdaarho], .provision-section-heading .section-kicker[b-0yqpdaarho] { display:block; margin-bottom:.25rem; color:#64748b; font-size:.7rem; font-weight:750; letter-spacing:.09em; }
